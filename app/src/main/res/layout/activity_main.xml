@@ -7,17 +7,20 @@
     tools:context=".MainActivity">
 
 
-
-
     <Button
         android:id="@+id/goToDetailsActivityButton"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10px"
         android:text="Go to details"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="10px"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.178"
+        tools:layout_editor_absoluteX="144dp"
 
-
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
