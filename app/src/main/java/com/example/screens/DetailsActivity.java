@@ -20,12 +20,12 @@ public class DetailsActivity extends AppCompatActivity {
 
 
 
-    TextView detailsName;
+    TextView showData;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
-        detailsName=findViewById(R.id.detailsName);
+        showData=findViewById(R.id.showData);
 
 
         Bundle extras = getIntent().getExtras();
@@ -36,7 +36,7 @@ public class DetailsActivity extends AppCompatActivity {
 
 
             String detailsText = "Animal: " + name + "\nYear: " + number;
-            detailsName.setText(detailsText);
+            showData.setText(detailsText);
 
 
         }
