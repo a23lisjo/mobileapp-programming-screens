@@ -1,24 +1,48 @@
 package com.example.screens;
 
-import android.os.Bundle;
 
-import androidx.activity.EdgeToEdge;
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
+import android.widget.TextView;
+
+
+
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+
 public class DetailsActivity extends AppCompatActivity {
 
+
+
+
+    TextView detailsName;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_details);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+        detailsName=findViewById(R.id.detailsName);
+
+
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            String name = extras.getString("name");
+            int number = extras.getInt("number");
+            // Do something with the name and number
+
+
+            String detailsText = "Name: " + name + "\nNumber: " + number;
+            detailsName.setText(detailsText);
+
+
+        }
+
+
+
+
     }
 }
