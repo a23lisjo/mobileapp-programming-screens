@@ -30,12 +30,12 @@ public class DetailsActivity extends AppCompatActivity {
 
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
-            String name = extras.getString("name");
-            int number = extras.getInt("number");
+            String name = extras.getString("animal");
+            int number = extras.getInt("year");
             // Do something with the name and number
 
 
-            String detailsText = "Name: " + name + "\nNumber: " + number;
+            String detailsText = "Animal: " + name + "\nYear: " + number;
             detailsName.setText(detailsText);
 
 

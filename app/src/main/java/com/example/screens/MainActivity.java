@@ -34,8 +34,8 @@ public class MainActivity extends AppCompatActivity {
 
 
                 Intent intent = new Intent(MainActivity.this, DetailsActivity.class);
-                intent.putExtra("name", "Daniel"); // Optional
-                intent.putExtra("number", 1); // Optional
+                intent.putExtra("animal", "Dog"); // Optional
+                intent.putExtra("year", 3); // Optional
                 startActivity(intent);
             }
         });
